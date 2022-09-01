@@ -24,8 +24,7 @@ private Connection conn;
 	
 	@Override
 	public void insert(Department obj) {
-		PreparedStatement st = null;	
-		
+		PreparedStatement st = null;			
 		
 		try {
 			st = conn.prepareStatement("INSERT INTO Department "

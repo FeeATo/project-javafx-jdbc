@@ -110,32 +110,32 @@ public class SellerListController implements Initializable, DataChangeListener {
 
 	// cria uma janelinha de diálogo e o parâmetro é o pai que chamou ele
 	private void createDialogForm(Seller obj, String absoluteName, Stage parentStage) {
-//		try {
-//
-//			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
-//			Pane pane = loader.load();
-//
-//			// injeção de dependências:
-//			SellerFormController controller = loader.getController();
-//			controller.setSeller(obj);
-//			controller.updateFormData();
-//			controller.subscribeDataChangeListener(this);
-//			controller.setSellerService(new SellerService());
-//
-//			//
-//
-//			Stage dialogStage = new Stage();
-//			dialogStage.setTitle("Enter Seller data");
-//			dialogStage.setScene(new Scene(pane));
-//			dialogStage.setResizable(false);
-//			dialogStage.initOwner(parentStage);
-//			// enquanto não fechar a janela, n pode acessar a janela anterior
-//			dialogStage.initModality(Modality.WINDOW_MODAL);
-//			dialogStage.showAndWait();
-//
-//		} catch (IOException e) {
-//			Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), AlertType.ERROR);
-//		}
+		try {
+
+			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
+			Pane pane = loader.load();
+
+			// injeção de dependências:
+			SellerFormController controller = loader.getController();
+			controller.setSeller(obj);
+			controller.updateFormData();
+			controller.subscribeDataChangeListener(this);
+			controller.setSellerService(new SellerService());
+
+			//
+
+			Stage dialogStage = new Stage();
+			dialogStage.setTitle("Enter Seller data");
+			dialogStage.setScene(new Scene(pane));
+			dialogStage.setResizable(false);
+			dialogStage.initOwner(parentStage);
+			// enquanto não fechar a janela, n pode acessar a janela anterior
+			dialogStage.initModality(Modality.WINDOW_MODAL);
+			dialogStage.showAndWait();
+
+		} catch (IOException e) {
+			Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), AlertType.ERROR);
+		}
 	}
 
 	@Override

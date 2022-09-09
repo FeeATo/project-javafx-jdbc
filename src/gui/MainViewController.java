@@ -82,8 +82,7 @@ public class MainViewController implements Initializable {
 			T controller = loader.getController(); //executa a função lambda passada como parâmetro
 			initializingAction.accept(controller);
 						
-		}catch(IOException e) {
-			e.printStackTrace();
+		}catch(IOException e) {			
 			Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), AlertType.ERROR);
 		}
 	}
